@@ -40,7 +40,11 @@ Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('
 
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', [ShortUrlController::class, 'dashboard'])->name('dashboard');
+    Route::post('/shorten', [ShortUrlController::class, 'create'])->name('shorten');
+    Route::get('/analytics/{shortCode}', [ShortUrlController::class, 'analytics'])->name('analytics');
 
 });
 
+
+Route::get('/{shortCode}', [ShortUrlController::class, 'redirect'])->name('redirect');
 
