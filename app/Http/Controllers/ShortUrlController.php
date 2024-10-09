@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ShortUrl;
 use App\Http\Requests\StoreShortUrlRequest;
 use App\Http\Requests\UpdateShortUrlRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ShortUrlController extends Controller
 {
@@ -62,5 +63,11 @@ class ShortUrlController extends Controller
     public function destroy(ShortUrl $shortUrl)
     {
         //
+    }
+
+    public function dashboard()
+    {
+        $shortUrls = Auth::user()->shortUrls;
+        return view('dashboard', compact('shortUrls'));
     }
 }
