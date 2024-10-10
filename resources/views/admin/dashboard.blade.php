@@ -32,4 +32,30 @@
         @endforeach
         </tbody>
     </table>
+    <form method="POST" action="{{ route('shorten') }}">
+        @csrf
+        <input type="url" name="long_url" required placeholder="Enter URL">
+
+
+        <label for="expire_at">Expiration Date (optional):</label>
+        <input type="date" name="expire_at" id="expire_at">
+
+        <button type="submit">Shorten</button>
+
+
+        @if ($errors->has('error'))
+            <span class="text-danger">{{ $errors->first('error') }}</span>
+        @endif
+
+
+        @error('long_url')
+        <span class="text-danger">{{ $message }}</span>
+        @enderror
+
+
+        @error('expire_at')
+        <span class="text-danger">{{ $message }}</span>
+        @enderror
+    </form>
+
 @endsection

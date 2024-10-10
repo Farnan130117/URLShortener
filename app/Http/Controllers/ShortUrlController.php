@@ -24,13 +24,14 @@ class ShortUrlController extends Controller
     {
         $request->validate([
             'long_url' => 'required|url|unique:short_urls,long_url',
+            'expire_at' => 'nullable|date|after_or_equal:today',
         ]);
 
         if (!$this->urlShortener->userCanCreateUrl(Auth::id())) {
             return back()->withErrors(['error' => 'URL limit reached for today']);
         }
 
-        $shortUrl = $this->urlShortener->createShortUrl(Auth::id(), $request->long_url);
+        $shortUrl = $this->urlShortener->createShortUrl(Auth::id(), $request->long_url, $request->expire_at);
 
         return redirect()->route('dashboard')->with('success', 'Short URL created: ' . $shortUrl->short_code);
     }
