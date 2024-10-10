@@ -51,7 +51,7 @@ class ShortUrlController extends Controller
     {
 //      $shortUrls = Auth::user()->shortUrls;
         $shortUrls = ShortUrl::where('user_id', Auth::user()->id)->get();
-        return view('dashboard', compact('shortUrls'));
+        return view('admin.dashboard', compact('shortUrls'));
     }
 
 }
