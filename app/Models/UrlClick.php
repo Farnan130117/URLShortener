@@ -16,6 +16,10 @@ class UrlClick extends Model
     ];
 
     // Define a relationship with ShortUrl
+//    public static function create(array $array)
+//    {
+//    }
+
     public function shortUrl()
     {
         return $this->belongsTo(ShortUrl::class);

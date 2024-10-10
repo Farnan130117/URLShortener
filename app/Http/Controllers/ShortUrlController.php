@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\ShortUrl;
 use App\Http\Requests\StoreShortUrlRequest;
 use App\Http\Requests\UpdateShortUrlRequest;
+use App\Models\UrlClick;
 use App\Services\UrlShortenerService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class ShortUrlController extends Controller
 {
@@ -51,4 +53,5 @@ class ShortUrlController extends Controller
         $shortUrls = ShortUrl::where('user_id', Auth::user()->id)->get();
         return view('dashboard', compact('shortUrls'));
     }
+
 }
