@@ -19,13 +19,13 @@ class UrlShortenerService
         $expireAt = $expireAt;
         // Generate a unique short code
         $shortCode = Str::random(6);
-
+        //dd($expireAt);
         // Create the Short URL in the database
         return ShortUrl::create([
         'user_id' => $userId,
         'long_url' => $longUrl,
         'short_code' => $shortCode,
-        'expire_at' => $expireAt,
+        'expires_at' => $expireAt,
         ]);
     }
 
