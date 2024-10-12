@@ -9,21 +9,23 @@ use Illuminate\Support\Str;
 
 class UrlShortenerService
 {
-    public function createShortUrl($userId, $longUrl)
+    public function createShortUrl($userId, $longUrl, $expireAt = null)
     {
         // Check if the user has created more than 10 URLs today
         if (!$this->userCanCreateUrl($userId)) {
         return false;
         }
-
+        // Get expiration date from the form
+        $expireAt = $expireAt;
         // Generate a unique short code
         $shortCode = Str::random(6);
-
+        //dd($expireAt);
         // Create the Short URL in the database
         return ShortUrl::create([
         'user_id' => $userId,
         'long_url' => $longUrl,
         'short_code' => $shortCode,
+        'expires_at' => $expireAt,
         ]);
     }
 
