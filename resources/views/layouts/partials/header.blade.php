@@ -12,8 +12,9 @@
     <nav class="main-nav navbar navbar-expand-lg">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="{{ route('home') }}">
-                <img class="logo-main" src="{{ asset('frontend/images/logo.svg') }}" alt="logo" />
+            <a class="navbar-brand" href="{{ route('home') }}" style="color: black;">
+                <b>SHORTLY</b>
+{{--                <img class="logo-main" src="{{ asset('frontend/images/logo.svg') }}" alt="logo" />--}}
             </a>
             <!-- Toogle Button -->
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">

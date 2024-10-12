@@ -5,8 +5,13 @@
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
                     <div class="footer-logo">
-                        <img src="{{ asset('frontend/images/logo.svg') }}" alt="logo" />
+{{--                        <img src="{{ asset('frontend/images/logo.svg') }}" alt="logo" />--}}
+                        <a class="navbar-brand" href="{{ route('home') }}" style="color: black;">
+                            <b>SHORTLY</b>
+                            {{--                <img class="logo-main" src="{{ asset('frontend/images/logo.svg') }}" alt="logo" />--}}
+                        </a>
                     </div>
+
                 </div>
             </div>
             <div class="row">

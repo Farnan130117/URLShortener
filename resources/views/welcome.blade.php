@@ -69,7 +69,7 @@
                                 <p>By <span>Md Mokammal Hossen Farnan</span></p>
                             </div>
                             <a href="#" class="featured-post-title">
-                                GET YOUR LONG URL SHORT WITH ANALYTICS
+                                GET MASKED URL WITH ANALYTICS
                             </a>
                             <ul class="featured-post-meta">
                                 <li>
