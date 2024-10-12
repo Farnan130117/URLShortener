@@ -18,9 +18,13 @@ use App\Http\Controllers\UrlClickController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', [ShortUrlController::class, 'index'])->name('home');
+
+// Create the load more route for AJAX
+Route::get('/load-more-urls', [ShortUrlController::class, 'loadMoreUrls'])->name('loadMoreUrls');
 
 // Registration Routes
 Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');

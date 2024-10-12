@@ -20,6 +20,39 @@ class ShortUrlController extends Controller
         $this->urlShortener = $urlShortener;
     }
 
+    public function index()
+    {
+        // Get the initial 10 short URLs
+        $shortUrls = ShortUrl::
+            orderByDesc('id')
+            ->take(5)
+            ->get();
+        $trendingUrls = ShortUrl::select('short_urls.*', \DB::raw('COUNT(url_clicks.id) as click_count'))
+            ->leftJoin('url_clicks', 'short_urls.id', '=', 'url_clicks.short_url_id')
+            ->groupBy('short_urls.id')
+            ->havingRaw('COUNT(url_clicks.id) > 0') // Ensures that only URLs with more than 0 clicks are retrieved
+            ->orderByDesc('click_count')
+            ->take(5) // Limit to top 5 trending URLs
+            ->get();
+
+
+        return view('welcome', compact('shortUrls','trendingUrls'));
+    }
+
+    public function loadMoreUrls(Request $request)
+    {
+        $offset = $request->offset;
+        $limit = 5;
+
+        // Fetch the next set of short URLs
+        $shortUrls = ShortUrl::skip($offset)
+            ->orderByDesc('id')
+            ->take($limit)
+            ->get();
+
+        return response()->json($shortUrls);
+    }
+
 //    public function create(Request $request)
 //    {
 //        $request->validate([

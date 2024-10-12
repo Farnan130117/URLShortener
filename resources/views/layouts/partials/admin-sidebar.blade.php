@@ -18,7 +18,7 @@
     <div class="scrollbar-inner sidebar-wrapper">
         <div class="user">
             <div class="photo">
-                <img src="assets/img/profile.jpg">
+                <img src="assets/img/profile.jpeg">
             </div>
             <div class="info">
                 <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">

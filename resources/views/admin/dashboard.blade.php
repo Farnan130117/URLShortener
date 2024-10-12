@@ -19,161 +19,7 @@
     <div class="main-panel" >
         <div class="content" >
             <div class="container-fluid">
-                <h4 class="page-title">Dashboard</h4>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card card-stats card-warning">
-                            <div class="card-body ">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="icon-big text-center">
-                                            <i class="la la-users"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-7 d-flex align-items-center">
-                                        <div class="numbers">
-                                            <p class="card-category">Visitors</p>
-                                            <h4 class="card-title">1,294</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card card-stats card-success">
-                            <div class="card-body ">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="icon-big text-center">
-                                            <i class="la la-bar-chart"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-7 d-flex align-items-center">
-                                        <div class="numbers">
-                                            <p class="card-category">Sales</p>
-                                            <h4 class="card-title">$ 1,345</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card card-stats card-danger">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="icon-big text-center">
-                                            <i class="la la-newspaper-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-7 d-flex align-items-center">
-                                        <div class="numbers">
-                                            <p class="card-category">Subscribers</p>
-                                            <h4 class="card-title">1303</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card card-stats card-primary">
-                            <div class="card-body ">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="icon-big text-center">
-                                            <i class="la la-check-circle"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-7 d-flex align-items-center">
-                                        <div class="numbers">
-                                            <p class="card-category">Order</p>
-                                            <h4 class="card-title">576</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 							<div class="col-md-3">
-                                                    <div class="card card-stats">
-                                                        <div class="card-body ">
-                                                            <div class="row">
-                                                                <div class="col-5">
-                                                                    <div class="icon-big text-center icon-warning">
-                                                                        <i class="la la-pie-chart text-warning"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-7 d-flex align-items-center">
-                                                                    <div class="numbers">
-                                                                        <p class="card-category">Number</p>
-                                                                        <h4 class="card-title">150GB</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="card card-stats">
-                                                        <div class="card-body ">
-                                                            <div class="row">
-                                                                <div class="col-5">
-                                                                    <div class="icon-big text-center">
-                                                                        <i class="la la-bar-chart text-success"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-7 d-flex align-items-center">
-                                                                    <div class="numbers">
-                                                                        <p class="card-category">Revenue</p>
-                                                                        <h4 class="card-title">$ 1,345</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="card card-stats">
-                                                        <div class="card-body">
-                                                            <div class="row">
-                                                                <div class="col-5">
-                                                                    <div class="icon-big text-center">
-                                                                        <i class="la la-times-circle-o text-danger"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-7 d-flex align-items-center">
-                                                                    <div class="numbers">
-                                                                        <p class="card-category">Errors</p>
-                                                                        <h4 class="card-title">23</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="card card-stats">
-                                                        <div class="card-body">
-                                                            <div class="row">
-                                                                <div class="col-5">
-                                                                    <div class="icon-big text-center">
-                                                                        <i class="la la-heart-o text-primary"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-7 d-flex align-items-center">
-                                                                    <div class="numbers">
-                                                                        <p class="card-category">Followers</p>
-                                                                        <h4 class="card-title">+45K</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                </div>
+
                 <h4 class="page-title">Forms</h4>
                 <div class="row">
                     <div class="col-md-8">
@@ -190,8 +36,8 @@
                                             <th>ID</th>
                                             <th>Long URL</th>
                                             <th>Short URL</th>
-                                            {{--                        <th>Created At</th>--}}
                                             <th>Expiration Date</th>
+                                            <th>Analytics</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -199,14 +45,13 @@
                                             <tr>
                                                 <td>{{ $url->id }}</td>
                                                 <td>{{ $url->long_url }}</td>
-{{--                                                <td><a href="{{ route('redirect', $url->short_code) }}" target="_blank">{{ $url->short_code }}</a></td>--}}
+                                                <td><a href="{{ url($url->short_code) }}" target="_blank">{{ url($url->short_code) }}</a></td>
+                                                <td>{{ $url->expires_at ? date('Y-m-d', strtotime($url->expires_at)) : 'N/A' }}</td>
                                                 <td>
                                                     <button type="button" class="btn btn-info view-analytics-btn" data-id="{{ $url->id }}" data-toggle="modal" data-target="#analyticsModal">
-                                                        {{ $url->short_code }}
+                                                        Insights
                                                     </button>
                                                 </td>
-                                                {{--                            <td>{{ $url->created_at->format('Y-m-d') }}</td>--}}
-                                                <td>{{ $url->expires_at ? date('Y-m-d', strtotime($url->expires_at)) : 'N/A' }}</td>
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -428,6 +273,37 @@
                         var uniqueCountries = [...new Set(response.analytics.map(click => click.location))];
                         var uniqueIps = [...new Set(response.analytics.map(click => click.ip_address))].length;
 
+                        // Find the latest visit
+                        if (response.analytics.length > 0) {
+                            var latestVisit = new Date(response.analytics[0].clicked_at); // Assuming the first one is the latest (sorted)
+                            response.analytics.forEach(function(click) {
+                                var clickDate = new Date(click.clicked_at);
+                                if (clickDate > latestVisit) {
+                                    latestVisit = clickDate;
+                                }
+                            });
+
+                            // Calculate the time difference
+                            var timeDifference = Math.floor((new Date() - latestVisit) / 1000); // Time difference in seconds
+
+                            var minutes = Math.floor(timeDifference / 60);
+                            var hours = Math.floor(timeDifference / 3600);
+                            var days = Math.floor(timeDifference / 86400);
+
+                            var latestVisitText;
+                            if (minutes < 1) {
+                                latestVisitText = "just now";
+                            } else if (minutes < 60) {
+                                latestVisitText = minutes + " minutes ago";
+                            } else if (hours < 24) {
+                                latestVisitText = hours + " hours ago";
+                            } else {
+                                latestVisitText = days + " days ago";
+                            }
+                        } else {
+                            var latestVisitText = "No visits yet";
+                        }
+
                         // Create the summary
                         var summaryHtml = `
                    <!-- <p><strong>Total Visitors:</strong> ${totalVisitors}</p> -->
@@ -504,8 +380,9 @@
                                         </div>
                                         <div class="col-7 d-flex align-items-center">
                                             <div class="numbers">
-                                                <p class="card-category">VPN USER</p>
-                                                <h4 class="card-title">576</h4>
+                                                <p class="card-category">LATEST VISIT</p>
+                                              <!--  <h4 class="card-title">${latestVisitText}</h4> -->
+                                              <h4 class="card-title" style="white-space: nowrap;">${latestVisitText}</h4>
                                             </div>
                                         </div>
                                     </div>

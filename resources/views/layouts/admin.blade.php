@@ -38,8 +38,8 @@
 <div class="wrapper">
     <div class="main-header">
         <div class="logo-header">
-            <a href="index.html" class="logo">
-                Ready Dashboard
+            <a href="i{{ route('dashboard') }}" class="logo">
+                 Dashboard
             </a>
             <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,19 +49,14 @@
         <nav class="navbar navbar-header navbar-expand-lg">
             <div class="container-fluid">
 
-                <form class="navbar-left navbar-form nav-search mr-md-3" action="">
-                    <div class="input-group">
-                        <input type="text" placeholder="Search ..." class="form-control">
-                        <div class="input-group-append">
-								<span class="input-group-text">
-									<i class="la la-search search-icon"></i>
-								</span>
-                        </div>
-                    </div>
-                </form>
+                    <a href="{{ route('home') }}" class="logo">
+                        Home
+                    </a>
+
+
                 <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
                     <li class="nav-item dropdown">
-                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpeg" alt="user-img" width="36" class="img-circle">
                             @if(Auth::check())
                             <span>{{ Auth::user()->name }}</span></span>
                             @endif
@@ -69,7 +64,7 @@
                         <ul class="dropdown-menu dropdown-user">
                             <li>
                                 <div class="user-box">
-                                    <div class="u-img"><img src="assets/img/profile.jpg" alt="user"></div>
+                                    <div class="u-img"><img src="assets/img/profile.jpeg" alt="user"></div>
                                     <div class="u-text">
                                         @if(Auth::check())
                                         <h4>{{ Auth::user()->name }}</h4>
@@ -107,7 +102,7 @@
 <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugin/chartist/chartist.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js') }}"></script>
-<script src="{{ asset('assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+{{--<script src="{{ asset('assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>--}}
 <script src="{{ asset('assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugin/jquery-mapael/jquery.mapael.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugin/jquery-mapael/maps/world_countries.min.js') }}"></script>
