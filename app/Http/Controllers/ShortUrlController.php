@@ -22,18 +22,33 @@ class ShortUrlController extends Controller
 
     public function index()
     {
-        // Get the initial 10 short URLs
+        // Get the initial 5 short URLs
         $shortUrls = ShortUrl::
             orderByDesc('id')
             ->take(5)
             ->get();
-        $trendingUrls = ShortUrl::select('short_urls.*', \DB::raw('COUNT(url_clicks.id) as click_count'))
+        // Get trending URLs
+        $trendingUrls = ShortUrl::select(
+            'short_urls.id',
+            'short_urls.long_url',  // Specify the required columns
+            'short_urls.short_code',  // Specify the required columns
+            'short_urls.user_id',    // Include other columns as needed
+            'short_urls.created_at',  // Add any additional required columns
+            \DB::raw('COUNT(url_clicks.id) as click_count')
+        )
             ->leftJoin('url_clicks', 'short_urls.id', '=', 'url_clicks.short_url_id')
-            ->groupBy('short_urls.id')
-            ->havingRaw('COUNT(url_clicks.id) > 0') // Ensures that only URLs with more than 0 clicks are retrieved
+            ->groupBy(
+                'short_urls.id',
+                'short_urls.long_url',
+                'short_urls.short_code',
+                'short_urls.user_id',
+                'short_urls.created_at'  // Ensure all selected columns are here
+            )
+            ->havingRaw('COUNT(url_clicks.id) > 0') // Ensure only URLs with more than 0 clicks are retrieved
             ->orderByDesc('click_count')
             ->take(5) // Limit to top 5 trending URLs
             ->get();
+       // dd($trendingUrls);
 
 
         return view('welcome', compact('shortUrls','trendingUrls'));
@@ -112,7 +127,8 @@ class ShortUrlController extends Controller
     public function dashboard()
     {
 //      $shortUrls = Auth::user()->shortUrls;
-        $shortUrls = ShortUrl::where('user_id', Auth::user()->id)->get();
+        $shortUrls = ShortUrl::where('user_id', Auth::user()->id)->orderByDesc('id')->get();
+        //dd($shortUrls);
         return view('admin.dashboard', compact('shortUrls'));
     }
 

@@ -137,8 +137,10 @@
                                 </div>
                             </div>
                             <div class="latest-widget-content">
+                                <?php $shortCode = (string) $url->short_code; ?>
                                 <div class="content-title">
-                                    <a href="{{ url($url->short_code) }}" target="_blank">{{ $url->short_code }}</a>
+{{--                                    <a href="{{ url($url->short_code) }}" target="_blank">{{ $url->short_code }}</a>--}}
+                                    <a href="{{ url($shortCode) }}" target="_blank">{{ $shortCode }}</a>
                                 </div>
                                 <div class="content-meta">
                                     <ul>
