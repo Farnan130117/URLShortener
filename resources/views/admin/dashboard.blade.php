@@ -235,9 +235,11 @@
                         var newRow = [
                             response.id,
                             response.long_url,
-                            `<a href="${response.short_url}" target="_blank">${response.short_code}</a>`,
-                            response.created_at,
-                            response.expires_at ? response.expires_at : 'N/A'
+                            // `<a href="${response.short_url}" target="_blank">${response.short_code}</a>`,
+                            `<a href="${window.location.origin}/${response.short_code}" target="_blank">${window.location.origin}/${response.short_code}</a>`,
+
+                            response.expires_at ? response.expires_at : 'N/A',
+                            response.created_at ? 'N/A' : 'N/A'
                         ];
 
                         // Add the new row to the DataTable
