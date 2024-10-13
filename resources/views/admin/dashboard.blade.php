@@ -216,7 +216,8 @@
                 "paging": true,
                 "ordering": true,
                 "searching": true,
-                "info": true
+                "info": true,
+                "order": [[0, 'desc']],
             });
 
             $('#urlShortenerForm').on('submit', function(e) {
@@ -241,6 +242,8 @@
 
                         // Add the new row to the DataTable
                         table.row.add(newRow).draw(false);
+                        // To ensure the new row appears at the top, use order() to sort by ID in descending order
+                        table.order([0, 'desc']).draw();  // Assuming the first column (index 0) is 'id'
 
                         // Clear the form fields
                         $('#urlShortenerForm')[0].reset();
