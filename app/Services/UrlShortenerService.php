@@ -53,6 +53,14 @@ class UrlShortenerService
     {
 
         $shortUrl = ShortUrl::where('short_code', $shortCode)->firstOrFail();
+
+
+        // Check if the URL has expired
+        if ($shortUrl->expires_at && now()->greaterThan($shortUrl->expires_at)) {
+            // URL is expired, abort with a custom message
+            return abort(403, 'This URL is expired.');
+        }
+
         $ip = request()->ip();
         $location = $this->getLocation($ip);
         //dd($location);
